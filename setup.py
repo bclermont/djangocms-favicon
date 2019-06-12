@@ -15,7 +15,6 @@ setup(
     name="djangocms-favicon",
     version="0.0.1",
     packages=find_packages(exclude=["settings.py"]),
-    scripts=['say_hello.py'],
     install_requires=REQUIREMENTS,
     include_package_data=True,
 
