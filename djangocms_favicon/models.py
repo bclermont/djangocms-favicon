@@ -17,7 +17,7 @@ class FaviconPluginModel(CMSPlugin):
         verbose_name_plural = _("FaviconPluginModels")
 
     def __str__(self):
-        return self.name
+        return f"<Favicon name={self.icon.name}> color={self.color}"
 
     def clean(self):
         if self.icon.width < 350 or self.icon.height < 350:
