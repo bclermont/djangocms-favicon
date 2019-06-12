@@ -20,7 +20,7 @@ class FaviconPluginModel(CMSPlugin):
         return self.name
 
     def clean(self):
-        if icon.width < 350 or icon.height < 350:
+        if self.icon.width < 350 or self.icon.height < 350:
             raise Exception("Image dimensions must be at least 350px")
-        if icon.width != icon.height:
+        if self.icon.width != self.icon.height:
             raise Exception("Image must be have equal width and height")
