@@ -7,3 +7,5 @@ __pycache__
 /env
 /*/static/css/style.css
 tmp/
+/dist
+*.egg-info
