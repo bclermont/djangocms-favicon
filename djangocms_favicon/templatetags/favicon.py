@@ -12,6 +12,8 @@ from easy_thumbnails.templatetags.thumbnail import (
 
 register = Library()
 
+VALID_OPTIONS.append("ext")
+
 
 class ThumbnailNode(Node):
     def __init__(self, source_var, opts, context_name=None):
@@ -89,10 +91,12 @@ class ThumbnailNode(Node):
                         opts['subsampling']
                     )
                 return self.bail_out(context)
+        # Check extension
+        extension = opts.pop("ext", None)
 
         try:
             thumbnailer = get_thumbnailer(source)
-            thumbnailer.thumbnail_extension = 'png'
+            thumbnailer.thumbnail_extension = extension or "png"
             thumbnail = thumbnailer.get_thumbnail(opts)
         except Exception:
             if raise_errors:
