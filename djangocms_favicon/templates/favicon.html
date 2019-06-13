@@ -1,4 +1,4 @@
-{% load thumbnail sekizai_tags %}
+{% load favicon sekizai_tags %}
 
 {% comment %}
 <!-- 16x16 ico -->
@@ -20,17 +20,17 @@
 
 {% addtoblock "head" %}
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="{% thumbnail instance.icon 16x16 %}" type="image/png">
-<link rel="icon" sizes="32x32" href="{% thumbnail instance.icon 32x32 %}" type="image/png">
-<link rel="icon" sizes="64x64" href="{% thumbnail instance.icon 64x64 %}" type="image/png">
-<link rel="icon" sizes="96x96" href="{% thumbnail instance.icon 96x96 %}" type="image/png">
-<link rel="icon" sizes="196x196" href="{% thumbnail instance.icon 196x196 %}" type="image/png">
-<link rel="apple-touch-icon" sizes="152x152" href="{% thumbnail instance.icon 152x152 %}">
-<link rel="apple-touch-icon" sizes="60x60" href="{% thumbnail instance.icon 60x60 %}">
-<link rel="apple-touch-icon" sizes="76x76" href="{% thumbnail instance.icon 76x76 %}">
-<link rel="apple-touch-icon" sizes="114x114" href="{% thumbnail instance.icon 114x114 %}">
-<link rel="apple-touch-icon" sizes="120x120" href="{% thumbnail instance.icon 120x120 %}">
-<link rel="apple-touch-icon" sizes="144x144" href="{% thumbnail instance.icon 144x144 %}">
-<meta name="msapplication-TileImage" content="{% thumbnail instance.icon 144x144 %}">
+<link rel="icon" href="{% icon instance.icon 16x16 %}" type="image/png">
+<link rel="icon" sizes="32x32" href="{% icon instance.icon 32x32 %}" type="image/png">
+<link rel="icon" sizes="64x64" href="{% icon instance.icon 64x64 %}" type="image/png">
+<link rel="icon" sizes="96x96" href="{% icon instance.icon 96x96 %}" type="image/png">
+<link rel="icon" sizes="196x196" href="{% icon instance.icon 196x196 %}" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="{% icon instance.icon 152x152 %}">
+<link rel="apple-touch-icon" sizes="60x60" href="{% icon instance.icon 60x60 %}">
+<link rel="apple-touch-icon" sizes="76x76" href="{% icon instance.icon 76x76 %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% icon instance.icon 114x114 %}">
+<link rel="apple-touch-icon" sizes="120x120" href="{% icon instance.icon 120x120 %}">
+<link rel="apple-touch-icon" sizes="144x144" href="{% icon instance.icon 144x144 %}">
+<meta name="msapplication-TileImage" content="{% icon instance.icon 144x144 %}">
 <meta name="msapplication-TileColor" content="{{ instance.color }}">
 {% endaddtoblock %}
