@@ -9,6 +9,7 @@ REQUIREMENTS = [
     'django-cms>=3.4.5',
     'django-colorfield>=0.1.15',
     'django-filer>=1.2.4',
+    'django-sekizai>=0.10.0',
 ]
 
 setup(
