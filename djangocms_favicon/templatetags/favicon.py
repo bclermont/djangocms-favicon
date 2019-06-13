@@ -16,6 +16,10 @@ VALID_OPTIONS.append("ext")
 
 
 class ThumbnailNode(Node):
+    """
+    Copied from easy_thumbnails.templatetags.thumbnail.
+    """
+
     def __init__(self, source_var, opts, context_name=None):
         self.source_var = source_var
         self.opts = opts
@@ -118,43 +122,7 @@ class ThumbnailNode(Node):
 @register.tag
 def icon(parser, token):
     """
-    Creates a thumbnail of an ImageField.
-    Basic tag Syntax::
-        {% thumbnail [source] [size] [options] %}
-    *source* must be a ``File`` object, usually an Image/FileField of a model
-    instance.
-    *size* can either be:
-    * the name of an alias
-    * the size in the format ``[width]x[height]`` (for example,
-      ``{% thumbnail person.photo 100x50 %}``) or
-    * a variable containing a valid size (i.e. either a string in the
-      ``[width]x[height]`` format or a tuple containing two integers):
-      ``{% thumbnail person.photo size_var %}``.
-    *options* are a space separated list of options which are used when
-    processing the image to a thumbnail such as ``sharpen``, ``crop`` and
-    ``quality=90``.
-    If *size* is specified as an alias name, *options* are used to override
-    and/or supplement the options defined in that alias.
-    The thumbnail tag can also place a
-    :class:`~easy_thumbnails.files.ThumbnailFile` object in the context,
-    providing access to the properties of the thumbnail such as the height and
-    width::
-        {% thumbnail [source] [size] [options] as [variable] %}
-    When ``as [variable]`` is used, the tag doesn't output anything. Instead,
-    use the variable like a standard ``ImageFieldFile`` object::
-        {% thumbnail obj.picture 200x200 upscale as thumb %}
-        <img src="{{ thumb.url }}"
-             width="{{ thumb.width }}"
-             height="{{ thumb.height }}" />
-    **Debugging**
-    By default, if there is an error creating the thumbnail or resolving the
-    image variable then the thumbnail tag will just return an empty string (and
-    if there was a context variable to be set then it will also be set to an
-    empty string).
-    For example, you will not see an error if the thumbnail could not
-    be written to directory because of permissions error. To display those
-    errors rather than failing silently, set ``THUMBNAIL_DEBUG = True`` in
-    your Django project's settings module.
+    Copied from easy_thumbnails.templatetags.thumbnail.
     """
     args = token.split_contents()
     tag = args[0]

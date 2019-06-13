@@ -6,25 +6,7 @@
         {
             "label": "Initial setup",
             "type": "shell",
-            "command": "virtualenv ${workspaceFolder}/env && ${workspaceFolder}/env/bin/pip install -r ${workspaceFolder}/requirements.txt && ${workspaceFolder}/env/bin/pip install -r ${workspaceFolder}/requirements-dev.txt && ${workspaceFolder}/env/bin/python ${workspaceFolder}/manage.py migrate",
-            "problemMatcher": [],
-        },
-        {
-            "label": "Run server",
-            "type": "shell",
-            "command": "source env/bin/activate && ./manage.py runserver_plus --nopin 9006",
-            "problemMatcher": [],
-        },
-        {
-            "label": "Create admin account",
-            "type": "shell",
-            "command": "${workspaceFolder}/env/bin/python ${workspaceFolder}/manage.py createsuperuser --username admin --email admin@localhost",
-            "problemMatcher": [],
-        },
-        {
-            "label": "Run shell",
-            "type": "shell",
-            "command": "${workspaceFolder}/env/bin/python ${workspaceFolder}/manage.py shell",
+            "command": "virtualenv ${workspaceFolder}/env && ${workspaceFolder}/env/bin/pip install -r ${workspaceFolder}/requirements.txt",
             "problemMatcher": [],
         }
     ]
