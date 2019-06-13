@@ -1,0 +1,2 @@
+exclude djangocms_favicon/settings.py
+recursive-include djangocms_favicon/templates *

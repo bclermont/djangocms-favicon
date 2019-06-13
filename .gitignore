@@ -1,0 +1,11 @@
+__pycache__
+.mypy_cache/
+/*.db
+/media
+*.pyc
+/static
+/env
+/*/static/css/style.css
+tmp/
+/dist
+*.egg-info

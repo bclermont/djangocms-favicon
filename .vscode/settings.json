@@ -1,0 +1,18 @@
+{
+    "python.pythonPath": "env/bin/python",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfPath": "env/bin/yapf",
+    "python.formatting.yapfArgs": ["--style=facebook"],
+    "python.linting.banditEnabled": true,
+    "python.linting.banditPath": "env/bin/bandit",
+    "python.linting.pylamaEnabled": true,
+    "python.linting.pylamaPath": "env/bin/pylama",
+    "files.associations": {
+        "**/templates/*.html": "django-html",
+        "**/templates/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "[python]": {
+        "editor.formatOnSave": true
+    }
+}

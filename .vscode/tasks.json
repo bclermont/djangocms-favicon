@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Initial setup",
+            "type": "shell",
+            "command": "virtualenv ${workspaceFolder}/env && ${workspaceFolder}/env/bin/pip install -r ${workspaceFolder}/requirements.txt",
+            "problemMatcher": [],
+        }
+    ]
+}
