@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'filer',
     'mptt',
     'colorfield',
+    'djangocms_favicon',
 ]
 
 MIDDLEWARE = [
@@ -50,8 +51,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-ROOT_URLCONF = 'djangocms_favicon.urls'
 
 TEMPLATES = [
     {
